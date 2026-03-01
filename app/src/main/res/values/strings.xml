@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Meet Woof</string>
+    <string-array name="dog_breeds">
+        <item>Mixed / Mutt (מעורב)</item>
+        <item>Labrador Retriever</item>
+        <item>German Shepherd</item>
+        <item>Golden Retriever</item>
+        <item>French Bulldog</item>
+        <item>Bulldog</item>
+        <item>Poodle</item>
+        <item>Beagle</item>
+        <item>Rottweiler</item>
+        <item>German Shorthaired Pointer</item>
+        <item>Dachshund</item>
+        <item>Pembroke Welsh Corgi</item>
+        <item>Australian Shepherd</item>
+        <item>Yorkshire Terrier</item>
+        <item>Boxer</item>
+        <item>Cavalier King Charles</item>
+        <item>Doberman Pinscher</item>
+        <item>Great Dane</item>
+        <item>Miniature Schnauzer</item>
+        <item>Siberian Husky</item>
+        <item>Bernese Mountain Dog</item>
+        <item>Cane Corso</item>
+        <item>Shih Tzu</item>
+        <item>Boston Terrier</item>
+        <item>Pomeranian</item>
+        <item>Havanese</item>
+        <item>English Springer Spaniel</item>
+        <item>Shetland Sheepdog</item>
+        <item>Brittany</item>
+        <item>Pug</item>
+        <item>Cocker Spaniel</item>
+        <item>Border Collie</item>
+        <item>Mastiff</item>
+        <item>Chihuahua</item>
+        <item>Vizsla</item>
+        <item>Basset Hound</item>
+        <item>Belgian Malinois</item>
+        <item>Maltese</item>
+        <item>Weimaraner</item>
+        <item>Collie</item>
+        <item>Newfoundland</item>
+        <item>Rhodesian Ridgeback</item>
+        <item>Shiba Inu</item>
+        <item>West Highland White Terrier</item>
+        <item>Bichon Frise</item>
+        <item>Bloodhound</item>
+        <item>Akita</item>
+        <item>St. Bernard</item>
+        <item>Bullmastiff</item>
+        <item>Samoyed</item>
+        <item>Jack Russell Terrier</item>
+        <item>Other</item>
+    </string-array>
+</resources>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fde7d0"
+    android:layoutDirection="ltr"
+    tools:context=".MatchFiltersActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#e3cab4"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Match Filters"
+            android:fontFamily="@font/rammetto_one"
+            android:textSize="24sp"
+            android:textColor="#6d112a"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_above="@+id/btnLetsWoof"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Playing As"
+                android:textStyle="bold"
+                android:textColor="#6d112a"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select your dog"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/etSelectMyDog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d4ad76"
+                android:layout_marginVertical="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maximum Distance"
+                android:textStyle="bold"
+                android:textColor="#6d112a"
+                android:textSize="16sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvDistanceValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 km"
+                    android:textColor="#333"
+                    android:minWidth="50dp"/>
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/sliderDistance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:valueFrom="1"
+                    android:valueTo="100"
+                    android:value="10"
+                    android:stepSize="1"
+                    app:thumbColor="#6d112a"
+                    app:trackColorActive="#6d112a"
+                    app:trackColorInactive="#e3cab4"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d4ad76"
+                android:layout_marginVertical="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age Range (Years)"
+                android:textStyle="bold"
+                android:textColor="#6d112a"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tvAgeRangeValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0 - 15"
+                android:gravity="center"
+                android:textColor="#333"
+                android:layout_marginTop="4dp"/>
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/sliderAgeRange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:valueFrom="0"
+                android:valueTo="20"
+                app:values="@array/initial_slider_values"
+                android:stepSize="1"
+                app:thumbColor="#6d112a"
+                app:trackColorActive="#6d112a"
+                app:trackColorInactive="#e3cab4"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d4ad76"
+                android:layout_marginVertical="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Energy Level (1-5)"
+                android:textStyle="bold"
+                android:textColor="#6d112a"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tvEnergyRangeValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1 - 5"
+                android:gravity="center"
+                android:textColor="#333"
+                android:layout_marginTop="4dp"/>
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/sliderEnergyRange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:valueFrom="1"
+                android:valueTo="5"
+                app:values="@array/initial_energy_values"
+                android:stepSize="1"
+                app:thumbColor="#6d112a"
+                app:trackColorActive="#6d112a"
+                app:trackColorInactive="#e3cab4"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d4ad76"
+                android:layout_marginVertical="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender Preference"
+                android:textStyle="bold"
+                android:textColor="#6d112a"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <RadioGroup
+                android:id="@+id/rgGenderFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:buttonTint="#6d112a"
+                    android:textColor="#6d112a"
+                    android:layout_weight="1"/>
+
+                <RadioButton
+                    android:id="@+id/rbFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:buttonTint="#6d112a"
+                    android:textColor="#6d112a"
+                    android:layout_weight="1"/>
+
+                <RadioButton
+                    android:id="@+id/rbBoth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Both"
+                    android:checked="true"
+                    android:buttonTint="#6d112a"
+                    android:textColor="#6d112a"
+                    android:layout_weight="1"/>
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d4ad76"
+                android:layout_marginVertical="16dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Filter by Breed (Optional)"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/etFilterBreed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnLetsWoof"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_above="@+id/bottomNavBar"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:text="Let's Woof!"
+        android:textSize="20sp"
+        android:fontFamily="@font/rammetto_one"
+        android:backgroundTint="#6d112a"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="12dp"/>
+
+    <include
+        android:id="@+id/bottomNavBar"
+        layout="@layout/layout_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fde7d0"
+    android:layoutDirection="ltr"
+    tools:context=".RemindersActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#e3cab4"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Reminders"
+            android:fontFamily="@font/rammetto_one"
+            android:textSize="24sp"
+            android:textColor="#6d112a"
+            android:layout_marginTop="50dp"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/bottomNavBar"
+        layout="@layout/layout_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvReminders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_above="@id/bottomNavBar"
+        android:clipToPadding="false"
+        android:padding="16dp"
+        tools:listitem="@layout/item_reminder" />
+
+    <TextView
+        android:id="@+id/tvEmptyState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No reminders yet!\nAdd one below."
+        android:textColor="#806d112a"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:visibility="gone"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomNavBar"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="24dp"
+        android:src="@android:drawable/ic_input_add"
+        android:backgroundTint="#6d112a"
+        app:tint="#FFFFFF"
+        android:contentDescription="Add Reminder" />
+
+</RelativeLayout>
